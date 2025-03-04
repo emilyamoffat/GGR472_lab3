@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GTA Trail Drive Time Calculator</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Mapbox -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.9.4/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v3.9.4/mapbox-gl.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+
+    <div class="container mt-4">
+        <div class="row d-flex justify-content-center align-items-center">
+            <!-- Header Section -->
+            <section class="header-section">
+                <h1 class="header-title text-center">GTA Trail Drive Time Calculator</h1>
+            </section>
+
+            <!-- Map Section -->
+            <div class="col-12">
+                <div id="map-container">
+                    <div id="my-map" class="map-container"></div>
+
+                    <!-- Legend tile - at top left -->
+                    <div id="legend-box" class="legend-box">
+                        <h5 class="text-center mb-2">Legend</h5>
+                        <ul class="list-unstyled mb-0">
+                            <li><span class="legend-icon destination"></span> Destination</li>
+                            <li><span class="legend-icon route"></span> Driving Route</li>
+                            <li><span class="legend-icon trail"></span> Bruce Trail</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- information section -->
+        <div class="row justify-content-center mt-4">
+            <div class="col-10 col-md-8 text-center">
+                <p class="lead text-white bg-dark p-3 rounded">
+                    This interactive map helps you see how far the Bruce Trail is from UofT campus! 
+                    Click on the map, and a line navigating from UofT to the point will appear, calculating the time it will take to drive there with traffic.
+                </p>
+                
+                <p class="text-white">
+                    The Bruce Trail is publicly accessible, running along the Niagara Escarpment from Niagara to Tobermory - through the GTA.
+                    Follow the link below for more details.
+                </p>
+                
+                <a href="https://brucetrail.org/explore-the-trail/#Bruce-Trail-101" class="btn btn-light">Bruce Trail Information</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- java ref -->
+    <script src="script3.js"></script>
+
+</body>
+</html>

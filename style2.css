@@ -1,0 +1,100 @@
+/* Page Background */
+body {
+    background-color: #3d4660;
+    color: white;
+}
+
+.header-title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    color: #094b20;
+    text-shadow: 2px 2px 5px rgba(232, 223, 223, 0.8);
+}
+
+/*map*/
+.map-container {
+    width: 100%;
+    max-width: 900px; 
+    height: 500px; 
+    border: 2px solid #45562d; 
+    margin: 20px auto;
+    display: block;
+}
+
+#my-map {
+    width: 100%;
+    height: 500px; 
+    margin: 0 auto; 
+    border: 2px solid #45562d;
+}
+
+
+/* drive time pop-up box */
+
+.custom-popup .mapboxgl-popup-content {
+    background-color: #f0f0f0 !important; /* Light grey background so text is readable... it keeps not working*/
+    color: #333; 
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+}
+/* Trip Duration Styling */
+.trip-duration {
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 5px;
+    background: #f8f9fa;
+    border-radius: 5px;
+}
+
+/* Set map to a larger size */
+#map-container {
+    position: relative;
+    width: 100%;
+    height: 550px; /* Increase height */
+}
+
+.map-container {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+/* legend */
+#legend-box {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #f0f0f0 !important;
+    color: #333; 
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.legend-icon {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    border-radius: 50%;
+}
+
+.destination {
+    background-color: red;
+}
+
+.route {
+    background-color: rgb(61, 153, 190);
+}
+
+.trail {
+    background-color: green;
+}
+
+
