@@ -79,7 +79,7 @@ map.on('load', function () {
     // Click event to select a destination
     map.on('click', (event) => {
         const coords = Object.values(event.lngLat);
-
+    
         // Update the endpoint feature position
         if (map.getSource('end')) {
             map.getSource('end').setData({
@@ -87,11 +87,22 @@ map.on('load', function () {
                 features: [{ type: 'Feature', geometry: { type: 'Point', coordinates: coords } }]
             });
         }
-
+    
+        // Check for intersection with trail line, change endpoint colour if it intersects
+        const features = map.queryRenderedFeatures(event.point, { layers: ['trails-line'] });
+    
+        if (features.length > 0) {
+            console.log("Endpoint intersects with the trail!");
+            map.setPaintProperty('end', 'circle-color', '#ffcc00'); // Change to yellow
+        } else {
+            console.log("No intersection detected.");
+            map.setPaintProperty('end', 'circle-color', '#f30'); // Keep red
+        }
+    
         // Get a route from UofT to the clicked location
         getRoute(coords);
     });
-});
+    
 
 // Function to fetch and display a driving route
 async function getRoute(end) {
@@ -129,3 +140,4 @@ async function getRoute(end) {
         console.error("Error fetching route:", error);
     }
 }
+});

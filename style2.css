@@ -89,6 +89,10 @@ body {
     background-color: red;
 }
 
+.trail-destination {
+    background-color:rgba(245, 219, 18, 0.887)
+}
+
 .route {
     background-color: rgb(61, 153, 190);
 }
